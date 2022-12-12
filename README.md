@@ -3,13 +3,10 @@
 **Pawan kalyan Jonnalagadda**
 ---
 I have completed this assigmnet using GCP Instance and this instance is enabled for nested virtualization.
-
-**Question-1**
-I have completed this assigment alone.
 ---
 
-**Quesstion-2**
-First we need to setup the environment
+
+**First we need to setup the environment**
 
 Step1: CLone the linux repo into the vm 
 using : git clone https://github.com/pawankalyanj/linux.git
@@ -52,6 +49,26 @@ Step 11: Now run the cpuid. file using command: gcc cpuid.cafter that we can see
 
 ![Screenshot 2022-12-05 at 10 44 15 PM](https://user-images.githubusercontent.com/98665897/205847200-39e8a85d-6a48-4707-bac5-0345d109448d.png)
 ![Screenshot 2022-12-05 at 10 46 40 PM](https://user-images.githubusercontent.com/98665897/205847245-7fe45cde-06f7-4030-b532-448ab972c723.png)
+
+**Question-3**
+Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there 
+more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
+
+ANSWER: The frequency of exits is not increasing at a stable rate (as observed in the frequency of exits for exit 48 screenshot). I have observed that VM boot for exit 28 entails up to ~17k exits after full boot.
+
+**Of the exit types defined in the SDM, which are the most frequent? Least?**
+ANSWER:
+Most Frequent exits:
+Exit 48: EPT Violation
+Exit 32: WRMSR
+Exit 1: External interrupt
+
+Least Frequent:
+Exit 54: WBINVD
+Exit 55: XSETBV
+Exit 29: MOV DR
+
+
 
 
 
